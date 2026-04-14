@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { use } from 'react';
 
-const Banner = () => {
+const Banner = ({ friendPromise }) => {
+
+    const friends = use(friendPromise);
+
     return (
         <div>
             {/* banner title n button*/}
@@ -18,19 +21,19 @@ const Banner = () => {
             {/* banner stats */}
             <div className='grid lg:grid-cols-4 md:grid-cols-2 gap-6 mt-10'>
                 <div className='p-8 rounded-xl bg-base-100 text-center border border-white shadow-md'>
-                    <h1>0</h1>
+                    <h1 className='text-3xl text-[#244D3F] font-semibold'>{friends.length}</h1>
                     <h2 className='text-[#64748B] text-[18px]'>Total Friends</h2>
                 </div>
                 <div className='p-8 rounded-xl bg-base-100 text-center border border-white shadow-md'>
-                    <h1>0</h1>
+                    <h1 className='text-3xl text-[#244D3F] font-semibold'>{friends.filter(friend => friend.status === 'on-track').length}</h1>
                     <h2 className='text-[#64748B] text-[18px]'>On Track</h2>
                 </div>
                 <div className='p-8 rounded-xl  bg-base-100 text-center border border-white shadow-md'>
-                    <h1>0</h1>
+                    <h1 className='text-3xl text-[#244D3F] font-semibold'>{friends.filter(friend => friend.status === 'need-attention').length}</h1>
                     <h2 className='text-[#64748B] text-[18px]'>Need Attention</h2>
                 </div>
                 <div className='p-8 rounded-xl bg-base-100 text-center border border-white shadow-md'>
-                    <h1>0</h1>
+                    <h1 className='text-3xl text-[#244D3F] font-semibold' >0</h1>
                     <h2 className='text-[#64748B] text-[18px]'>Interactions This Month</h2>
                 </div>
                 

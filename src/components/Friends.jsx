@@ -3,9 +3,8 @@
 import React, { use } from 'react';
 import FriendCard from './FriendCard';
 
-const friendPromise = fetch('/friends.json').then(res => res.json());
 
-const Friends = () => {
+const Friends = ({ friendPromise }) => {
 
     const friends = use(friendPromise);
 
