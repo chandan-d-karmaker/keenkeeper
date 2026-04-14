@@ -1,14 +1,13 @@
 'use client'
 
-import React, { use } from 'react';
+import React, { use, useContext } from 'react';
 import FriendCard from './FriendCard';
 import { friendContext } from '@/app/contextAPI/friendContext';
 
 
 const Friends = () => {
 
-    const friendsContext = use(friendContext);
-    const friends = use(friendsContext);
+    const {friends} = useContext(friendContext);
 
 
     return (

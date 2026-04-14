@@ -1,5 +1,5 @@
 'use client';
-import React, { use } from 'react';
+import React, { use, useContext } from 'react';
 import { friendContext } from '../contextAPI/friendContext';
 import Image from 'next/image';
 import { PiPhoneCall } from "react-icons/pi";
@@ -13,9 +13,10 @@ import { MdDelete } from "react-icons/md";
 
 const FriendDetails = ({ params }) => {
     const { friendId } = use(params);
-    const friendsContext = use(friendContext);
-    const friends = use(friendsContext);
+    const { friends, handleCall, handleSms, handleVideo, interaction } = useContext(friendContext);
     const efriend = friends.find(friend => friend.id === Number(friendId));
+    const interactions = interaction.filter(item => item.friend.id === Number(friendId));
+
     console.log(efriend);
 
 
@@ -83,15 +84,15 @@ const FriendDetails = ({ params }) => {
                 <div className='p-6 space-y-4 bg-base-100 rounded-2xl border-white shadow-md'>
                     <h1 className='text-xl font-medium text-[#244D3F]'>Quick Check-In</h1>
                     <div className='grid grid-cols-1 md:grid-cols-3 gap-6 '>
-                        <div className='p-4 space-y-2 text-center bg-[#F8FAFC] rounded-lg flex flex-col items-center justify-center border border-[#E9E9E9] cursor-pointer'>
+                        <div onClick={()=> handleCall(efriend)} className='p-4 space-y-2 text-center bg-[#F8FAFC] rounded-lg flex flex-col items-center justify-center border border-[#E9E9E9] cursor-pointer'>
                             <PiPhoneCall />
                             <p>Call</p>
                         </div>
-                        <div className='p-4 space-y-2 text-center bg-[#F8FAFC] rounded-lg flex flex-col items-center justify-center border border-[#E9E9E9] cursor-pointer'>
+                        <div onClick={()=> handleSms(efriend)} className='p-4 space-y-2 text-center bg-[#F8FAFC] rounded-lg flex flex-col items-center justify-center border border-[#E9E9E9] cursor-pointer'>
                             <MdSms />
                             <p>Text</p>
                         </div>
-                        <div className='p-4 space-y-2 text-center bg-[#F8FAFC] rounded-lg flex flex-col items-center justify-center border border-[#E9E9E9] cursor-pointer'>
+                        <div onClick={()=> handleVideo(efriend)} className='p-4 space-y-2 text-center bg-[#F8FAFC] rounded-lg flex flex-col items-center justify-center border border-[#E9E9E9] cursor-pointer'>
                             <FaVideo />
                             <p>Video</p>
                         </div>
@@ -106,8 +107,20 @@ const FriendDetails = ({ params }) => {
                             Full History
                         </button>
                     </div>
-                    <div>
-
+                    <div className='space-y-3 mt-4'>
+                        {interactions.length > 0 ? (
+                            interactions.map((item, index) => (
+                                <div key={index} className='p-4 rounded-xl bg-[#F8FAFC] border border-[#E9E9E9]'>
+                                    <div className='flex items-center justify-between'>
+                                        <p className='font-semibold text-[#1F2937]'>{item.type}</p>
+                                        <p className='text-xs text-[#64748B]'>{new Date(item.timestamp).toLocaleString()}</p>
+                                    </div>
+                                    <p className='text-sm text-[#64748B]'>with {item.friend.name}</p>
+                                </div>
+                            ))
+                        ) : (
+                            <p className='text-[#64748B]'>No interactions yet. Use Call, Text, or Video to add one.</p>
+                        )}
                     </div>
                 </div>
 

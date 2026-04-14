@@ -4,9 +4,8 @@ import React, { use, useContext } from 'react';
 
 const Banner = () => {
 
-    const friendsContext = useContext(friendContext);
+    const { friends } = useContext(friendContext);
     // console.log(friends);
-    const friends = use(friendsContext);
 
     return (
         <div>
@@ -40,7 +39,7 @@ const Banner = () => {
                     <h1 className='text-3xl text-[#244D3F] font-semibold' >0</h1>
                     <h2 className='text-[#64748B] text-[18px]'>Interactions This Month</h2>
                 </div>
-                
+
             </div>
         </div>
     );
