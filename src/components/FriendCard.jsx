@@ -1,9 +1,10 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 const FriendCard = ({ friend }) => {
     return (
-        <div className='flex flex-col items-center justify-center bg-base-100 p-6 rounded-xl space-y-3'>
+        <Link href={`/${friend.id}`} className='flex flex-col items-center justify-center bg-base-100 p-6 rounded-xl space-y-3'>
 
             <div>
                 <Image src={friend.picture} alt={friend.name} width={100} height={100} />
@@ -25,7 +26,7 @@ const FriendCard = ({ friend }) => {
                 </div>
 
             </div>
-        </div>
+        </Link>
     );
 };
 

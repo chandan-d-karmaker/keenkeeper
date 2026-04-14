@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Banner from "@/components/banner/Banner";
 import Footer from "@/components/Footer";
+import FriendContextProvider from "./contextAPI/friendContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,8 +30,10 @@ export default function RootLayout({ children }) {
 
         <Navbar></Navbar>
         <main className="w-4/5 mx-auto my-20">
-          
-          {children}
+          <FriendContextProvider>
+            {children}
+
+          </FriendContextProvider>
 
         </main>
         <Footer></Footer>

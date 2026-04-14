@@ -1,13 +1,18 @@
-import React from 'react';
+'use client';
+import React, { createContext } from 'react';
 
+export const friendContext = createContext();
+const friendPromise = fetch('/friends.json').then(res => res.json());
 
+const FriendContextProvider = ({ children }) => {
 
-const friendContext = () => {
     return (
-        <div>
-            
-        </div>
+        <friendContext.Provider value={friendPromise}>
+            {children}
+        </friendContext.Provider>
     );
 };
 
-export default friendContext;
+export default FriendContextProvider;
+        
+

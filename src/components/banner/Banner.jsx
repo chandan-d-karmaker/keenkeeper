@@ -1,8 +1,12 @@
-import React, { use } from 'react';
+'use client'
+import FriendContextProvider, { friendContext } from '@/app/contextAPI/friendContext';
+import React, { use, useContext } from 'react';
 
-const Banner = ({ friendPromise }) => {
+const Banner = () => {
 
-    const friends = use(friendPromise);
+    const friendsContext = useContext(friendContext);
+    // console.log(friends);
+    const friends = use(friendsContext);
 
     return (
         <div>
