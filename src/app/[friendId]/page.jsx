@@ -15,6 +15,7 @@ import InteractionCard from '@/components/InteractionCard';
 const FriendDetails = ({ params }) => {
     const { friendId } = use(params);
     const { friends, handleCall, handleSms, handleVideo, interaction } = useContext(friendContext);
+    console.log("Interaction:", interaction);
     const efriend = friends.find(friend => friend.id === Number(friendId));
     const interactions = interaction.filter(item => item.friend.id === Number(friendId));
 
@@ -22,7 +23,7 @@ const FriendDetails = ({ params }) => {
 
 
     return (
-        <div className='flex gap-6'>
+        <div className='flex flex-col lg:flex-row gap-6'>
 
             <div>
                 <div className='flex flex-col items-center justify-center bg-base-100 p-6 rounded-xl space-y-3 mb-4'>
@@ -101,7 +102,7 @@ const FriendDetails = ({ params }) => {
                 </div>
 
                 <div className='bg-base-100 p-6 border-white shadow-md rounded-2xl'>
-                    <div className='flex justify-between items-center'>
+                    <div className='flex flex-wrap justify-between items-center'>
                         <h1 className='text-xl font-medium text-[#244D3F]'>Recent Interactions</h1>
                         <button className='btn'>
                             <FaClockRotateLeft />

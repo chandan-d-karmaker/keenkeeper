@@ -14,7 +14,7 @@ const TimelineCard = ({ item }) => {
                 <div className='flex flex-col'>
                     <div className='flex justify-center items-center gap-2'>
                         <p className='text-lg font-semibold text-[#1F2937]'>{item.type}</p>
-                        <p className='text-sm text-[#64748B]'>with {item.friend.name}</p>
+                        <p className='text-sm text-[#64748B] text-right md:text-start'>with {item.friend.name}</p>
                     </div>
                     <p className='text-xs text-[#64748B]'>{new Date(item.timestamp).toLocaleString()}</p>
                 </div>

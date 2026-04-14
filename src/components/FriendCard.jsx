@@ -14,9 +14,9 @@ const FriendCard = ({ friend }) => {
                     <h2>{friend.name}</h2>
                     <p>{friend.days_since_contact} days ago</p>
                 </div>
-                <div className='flex justify-center items-center my-2'>
+                <div className='flex flex-wrap justify-center items-center my-2'>
                     {
-                        friend.tags.map(tag => <span className='bg-[#CBFADB] py-1 px-2 ml-2 rounded-3xl text-[12px] font-medium' key={tag}>{tag.toUpperCase()}</span>)
+                        friend.tags.map(tag => <span className='bg-[#CBFADB] py-1 px-2 ml-2 rounded-3xl text-[12px] text-center font-medium mb-2 lg:mb-0' key={tag}>{tag.toUpperCase()}</span>)
                     }
                 </div>
                 <div className='flex items-center justify-center text-white'>
