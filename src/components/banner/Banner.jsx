@@ -16,7 +16,7 @@ const Banner = () => {
             </div>
 
             {/* banner stats */}
-            <div className='grid lg:grid-cols-4 md:grid-cols-2 gap-6 my-20'>
+            <div className='grid lg:grid-cols-4 md:grid-cols-2 gap-6 mt-10'>
                 <div className='p-8 rounded-xl bg-base-100 text-center border border-white shadow-md'>
                     <h1>0</h1>
                     <h2 className='text-[#64748B] text-[18px]'>Total Friends</h2>
