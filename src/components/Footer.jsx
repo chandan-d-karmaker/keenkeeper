@@ -10,7 +10,7 @@ const Footer = () => {
 
                     {/* Title */}
                     <div className='flex flex-col justify-center items-center space-y-4'>
-                        <Image src='/imgs/logo-xl.png' alt="Footer Logo" width={400} height={60} />
+                        <Image src='/imgs/logo-xl.png' alt="Footer Logo" width={400} height={60} className='w-100 h-15' />
                         <p className='opacity-80 text-white text-center'>Your personal shelf of meaningful connections. Browse, tend, and nurture the relationships that matter most.</p>
                     </div>
 

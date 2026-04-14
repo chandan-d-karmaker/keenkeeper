@@ -1,14 +1,15 @@
 'use client';
 import React, { createContext, use, useState } from 'react';
 import { toast } from 'react-toastify';
+import friendsData from '@/app/data/friends.json';
 
 export const friendContext = createContext();
-const friendPromise = fetch('/friends.json').then(res => res.json());
+// const friendPromise = fetch('/friends.json').then(res => res.json());
 
 
 
 const FriendContextProvider = ({ children }) => {
-    const friends = use(friendPromise);
+
 
     const [timeline, setTimeline] = useState([]);
     const [call, setCall] = useState([]);
@@ -16,7 +17,7 @@ const FriendContextProvider = ({ children }) => {
     const [video, setVideo] = useState([]);
 
     const handleCall = (friend)=>{
-        toast('Calling friend...');
+        toast(`Calling ${friend.name}...`);
         setCall([...call, friend]);
         setTimeline([...timeline, {
             friend,
@@ -25,7 +26,7 @@ const FriendContextProvider = ({ children }) => {
         }]);
     }
     const handleSms = (friend)=>{
-        toast('Sending SMS...');
+        toast(`Sending SMS to ${friend.name}...`);
         setSms([...sms, friend]);
         setTimeline([...timeline, {
             friend,
@@ -34,7 +35,7 @@ const FriendContextProvider = ({ children }) => {
         }]);
     }
     const handleVideo = (friend)=>{
-        toast('Starting video call...');
+        toast(`Starting video call with ${friend.name}...`);
         setVideo([...video, friend]);
         setTimeline([...timeline, {
             friend,
@@ -44,7 +45,7 @@ const FriendContextProvider = ({ children }) => {
     }
 
     const data = {
-        friends,
+        friends: friendsData,
         timeline,
         interaction: timeline,
         handleCall,

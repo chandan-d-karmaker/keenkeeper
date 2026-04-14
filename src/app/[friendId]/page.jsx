@@ -9,6 +9,7 @@ import { FaClockRotateLeft } from "react-icons/fa6";
 import { RiNotificationSnoozeLine } from "react-icons/ri";
 import { FaArchive } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
+import InteractionCard from '@/components/InteractionCard';
 
 
 const FriendDetails = ({ params }) => {
@@ -110,13 +111,7 @@ const FriendDetails = ({ params }) => {
                     <div className='space-y-3 mt-4'>
                         {interactions.length > 0 ? (
                             interactions.map((item, index) => (
-                                <div key={index} className='p-4 rounded-xl bg-[#F8FAFC] border border-[#E9E9E9]'>
-                                    <div className='flex items-center justify-between'>
-                                        <p className='font-semibold text-[#1F2937]'>{item.type}</p>
-                                        <p className='text-xs text-[#64748B]'>{new Date(item.timestamp).toLocaleString()}</p>
-                                    </div>
-                                    <p className='text-sm text-[#64748B]'>with {item.friend.name}</p>
-                                </div>
+                                <InteractionCard key={index} item={item} />
                             ))
                         ) : (
                             <p className='text-[#64748B]'>No interactions yet. Use Call, Text, or Video to add one.</p>
