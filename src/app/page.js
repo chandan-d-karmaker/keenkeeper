@@ -4,7 +4,6 @@ import Friends from "@/components/Friends";
 import Image from "next/image";
 import { Suspense } from "react";
 
-// const friendPromise = fetch('/friends.json').then(res => res.json());
 
 
 

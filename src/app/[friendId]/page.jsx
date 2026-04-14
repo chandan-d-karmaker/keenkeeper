@@ -3,10 +3,10 @@ import React from 'react';
 const FriendDetails = async ({params}) => {
 
     const { friendId } = await params;
-    // console.log(params);
+    console.log(friendId);
     return (
         <div>
-            <h3>This is friends details page of {friendId}</h3>
+           
         </div>
     );
 };
