@@ -9,8 +9,8 @@ const Footer = () => {
                 <div className='pt-20 pb-8 space-y-6'>
 
                     {/* Title */}
-                    <div className='flex flex-col justify-center items-center space-y-4'>
-                        <Image src='/imgs/logo-xl.png' alt="Footer Logo" width={400} height={60} className='w-100 h-15' />
+                    <div className='flex flex-col justify-center items-center space-y-4 max-w-md mx-auto'>
+                        <Image src='/imgs/logo-xl.png' loading='eager' alt="Footer Logo" width={400} height={60} className='w-full h-full' />
                         <p className='opacity-80 text-white text-center'>Your personal shelf of meaningful connections. Browse, tend, and nurture the relationships that matter most.</p>
                     </div>
 

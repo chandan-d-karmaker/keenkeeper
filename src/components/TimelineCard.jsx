@@ -7,9 +7,9 @@ const TimelineCard = ({ item }) => {
         <div className='p-6 bg-base-100 rounded-2xl border border-white shadow-md'>
             <div className='flex items-center gap-4'>
                 <div>
-                    {item.type === 'Call' && <Image src="/imgs/call.png" alt="call" width={20} height={20} />}
-                    {item.type === 'SMS' && <Image src="/img/text.png" alt="text" width={20} height={20} />}
-                    {item.type === 'Video Call' && <Image src="/imgs/video.png" alt="video" width={20} height={20} />}
+                    {item.type === 'Call' && <Image src="/imgs/call.png" alt="call" width={40} height={40} />}
+                    {item.type === 'SMS' && <Image src="/imgs/text.png" alt="text" width={40} height={40} />}
+                    {item.type === 'Video Call' && <Image src="/imgs/video.png" alt="video" width={40} height={40} />}
                 </div>
                 <div className='flex flex-col'>
                     <div className='flex justify-center items-center gap-2'>
