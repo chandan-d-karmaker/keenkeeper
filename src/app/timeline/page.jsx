@@ -1,11 +1,14 @@
 'use client';
 
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { friendContext } from '../contextAPI/friendContext';
 import TimelineCard from '@/components/TimelineCard';
 
 const TimelinePage = () => {
     const { timeline } = useContext(friendContext);
+    
+
+    const [filteredTimeline, setFilteredTimeline] = useState(timeline);
 
     return (
         <div className='space-y-6'>

@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Banner from "@/components/banner/Banner";
 import Footer from "@/components/Footer";
 import FriendContextProvider from "./contextAPI/friendContext";
-import { ToastContainer } from "react-toastify";
+import { Slide, ToastContainer } from "react-toastify";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,7 +38,19 @@ export default function RootLayout({ children }) {
 
         </main>
         <Footer></Footer>
-        <ToastContainer />
+        <ToastContainer
+          position="top-center"
+          autoClose={2000}
+          hideProgressBar={true}
+          newestOnTop={false}
+          closeOnClick={false}
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover={false}
+          theme="colored"
+          transition={Slide}
+        />
       </body>
     </html>
   );
