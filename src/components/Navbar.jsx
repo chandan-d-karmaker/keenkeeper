@@ -1,8 +1,13 @@
+'use client'
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import React from 'react';
 
 const Navbar = () => {
+
+    const pathname = usePathname();
+    console.log(pathname);
     return (
         <div>
             <div className="navbar bg-base-100 shadow-sm">
@@ -22,14 +27,14 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <a className="btn btn-ghost text-xl">
-                        <Image src='/logo.png' alt='logo' width={131} height={31}></Image>
+                        <Image src='/imgs/logo.png' alt='logo' width={131} height={31}></Image>
                     </a>
                 </div>
 
-                <div className="navbar-end">
-                    <Link href='/' className="btn">Home</Link>
-                    <Link href='/timeline' className="btn">Timeline</Link>
-                    <Link href='/stats' className="btn">Stats</Link>
+                <div className="navbar-end space-x-2">
+                    <Link href='/' className={`${pathname === '/' ? 'bg-[#244D3F] text-white font-semibold btn' : 'btn-ghost text-[#64748B]'}`}>Home</Link>
+                    <Link href='/timeline' className={`btn ${pathname === '/timeline' ? 'bg-[#244D3F] text-white font-semibold btn' : 'btn-ghost text-[#64748B]'}`}>Timeline</Link>
+                    <Link href='/stats' className={`btn ${pathname === '/stats' ? 'bg-[#244D3F] text-white font-semibold btn' : 'btn-ghost text-[#64748B]'}`}>Stats</Link>
                 </div>
             </div>
         </div>
