@@ -4,7 +4,7 @@ import React from 'react';
 
 const FriendCard = ({ friend }) => {
     return (
-        <Link href={`/${friend.id}`} className='flex flex-col items-center justify-center bg-base-100 p-6 rounded-xl space-y-3'>
+        <Link href={`/${friend.id}`} className='flex flex-col items-center justify-center bg-base-100 p-6 rounded-xl space-y-3 shadow-xl border border-white hover:border-[#7fbea9]'>
 
             <div>
                 <Image src={friend.picture} alt={friend.name} width={100} height={100} />

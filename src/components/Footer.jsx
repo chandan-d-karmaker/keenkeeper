@@ -4,7 +4,7 @@ import Image from 'next/image';
 const Footer = () => {
     return (
         <div className='bg-[#244D3F]'>
-            <div className='w-4/5 mx-auto'>
+            <div className='md:w-4/5 md:mx-auto mx-4'>
 
                 <div className='pt-20 pb-8 space-y-6'>
 
@@ -26,7 +26,7 @@ const Footer = () => {
                 </div>
 
                 <div className="divider mt-10 mb-8"></div>
-                <div className='flex justify-between text-[#FAFAFA] opacity-50'>
+                <div className='flex md:flex-row flex-col gap-10 justify-between text-[#FAFAFA] opacity-50'>
                     <p className='leading-6'>© 2026 KeenKeeper. All rights reserved.</p>
                     <p className='leading-6 flex gap-3'><span>Privacy Policy</span> <span>Terms of Service</span> <span>Cookies</span></p>
                 </div>

@@ -25,8 +25,8 @@ const FriendDetails = ({ params }) => {
     return (
         <div className='flex flex-col lg:flex-row gap-6'>
 
-            <div>
-                <div className='flex flex-col items-center justify-center bg-base-100 p-6 rounded-xl space-y-3 mb-4'>
+            <div className='md:flex lg:flex-col gap-4'>
+                <div className='flex flex-col items-center justify-center bg-base-100 p-6 rounded-xl space-y-3 mb-6 shadow-xl border border-white hover:border-[#7fbea9]'>
 
                     <div>
                         <Image src={efriend.picture} alt={efriend.name} width={100} height={100} />
@@ -86,15 +86,15 @@ const FriendDetails = ({ params }) => {
                 <div className='p-6 space-y-4 bg-base-100 rounded-2xl border-white shadow-md'>
                     <h1 className='text-xl font-medium text-[#244D3F]'>Quick Check-In</h1>
                     <div className='grid grid-cols-1 md:grid-cols-3 gap-6 '>
-                        <div onClick={()=> handleCall(efriend)} className='p-4 space-y-2 text-center bg-[#F8FAFC] rounded-lg flex flex-col items-center justify-center border border-[#E9E9E9] cursor-pointer'>
+                        <div onClick={()=> handleCall(efriend)} className='p-4 space-y-2 text-center bg-[#F8FAFC] rounded-lg flex flex-col items-center justify-center border border-[#E9E9E9] cursor-pointer hover:border-[#7fbea9]'>
                             <PiPhoneCall />
                             <p>Call</p>
                         </div>
-                        <div onClick={()=> handleSms(efriend)} className='p-4 space-y-2 text-center bg-[#F8FAFC] rounded-lg flex flex-col items-center justify-center border border-[#E9E9E9] cursor-pointer'>
+                        <div onClick={()=> handleSms(efriend)} className='p-4 space-y-2 text-center bg-[#F8FAFC] rounded-lg flex flex-col items-center justify-center border border-[#E9E9E9] cursor-pointer hover:border-[#7fbea9]'>
                             <MdSms />
                             <p>Text</p>
                         </div>
-                        <div onClick={()=> handleVideo(efriend)} className='p-4 space-y-2 text-center bg-[#F8FAFC] rounded-lg flex flex-col items-center justify-center border border-[#E9E9E9] cursor-pointer'>
+                        <div onClick={()=> handleVideo(efriend)} className='p-4 space-y-2 text-center bg-[#F8FAFC] rounded-lg flex flex-col items-center justify-center border border-[#E9E9E9] cursor-pointer hover:border-[#7fbea9]'>
                             <FaVideo />
                             <p>Video</p>
                         </div>
@@ -103,7 +103,7 @@ const FriendDetails = ({ params }) => {
 
                 <div className='bg-base-100 p-6 border-white shadow-md rounded-2xl'>
                     <div className='flex flex-wrap justify-between items-center'>
-                        <h1 className='text-xl font-medium text-[#244D3F]'>Recent Interactions</h1>
+                        <h1 className='text-xl font-medium text-[#244D3F] mb-2 md:mb-0'>Recent Interactions</h1>
                         <button className='btn'>
                             <FaClockRotateLeft />
                             Full History

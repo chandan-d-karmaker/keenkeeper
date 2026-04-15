@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
       <body className="min-h-full flex flex-col bg-[#F8FAFC]">
 
         <Navbar></Navbar>
-        <main className="w-4/5 mx-auto my-20">
+        <main className="md:w-4/5 md:mx-auto my-20 mx-4">
           <FriendContextProvider>
             {children}
 
