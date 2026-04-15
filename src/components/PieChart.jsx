@@ -24,7 +24,7 @@ export default function PieChart({ isAnimationActive = true }) {
 
     // #endregion { width: '100%', maxWidth: '400px', height: '450px' }
     return (
-        <div className='w-full max-w-100 md:h-112 h-50'>
+        <div className='w-full max-w-100 md:h-112 h-80'>
             <ResponsiveContainer width="100%" height="100%" aspect={1}>
                 <RechartsPieChart>
                     <Pie

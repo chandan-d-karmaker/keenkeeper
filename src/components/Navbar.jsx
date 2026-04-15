@@ -3,6 +3,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';
+import { GoHomeFill } from "react-icons/go";
+import { FaClock } from "react-icons/fa6";
+import { FaChartPie } from "react-icons/fa";
 
 const Navbar = () => {
 
@@ -31,9 +34,9 @@ const Navbar = () => {
                 </div>
 
                 <div className="navbar-end space-x-2 hidden md:flex">
-                    <Link href='/' className={`btn ${pathname === '/' ? 'bg-[#244D3F] text-white font-semibold btn' : 'btn-ghost text-[#64748B]'}`}>Home</Link>
-                    <Link href='/timeline' className={`btn ${pathname === '/timeline' ? 'bg-[#244D3F] text-white font-semibold btn' : 'btn-ghost text-[#64748B]'}`}>Timeline</Link>
-                    <Link href='/stats' className={`btn ${pathname === '/stats' ? 'bg-[#244D3F] text-white font-semibold btn' : 'btn-ghost text-[#64748B]'}`}>Stats</Link>
+                    <Link href='/' className={`btn ${pathname === '/' ? 'bg-[#244D3F] text-white font-semibold btn' : 'btn-ghost text-[#64748B]'}`}><GoHomeFill />Home</Link>
+                    <Link href='/timeline' className={`btn ${pathname === '/timeline' ? 'bg-[#244D3F] text-white font-semibold btn' : 'btn-ghost text-[#64748B]'}`}><FaClock />Timeline</Link>
+                    <Link href='/stats' className={`btn ${pathname === '/stats' ? 'bg-[#244D3F] text-white font-semibold btn' : 'btn-ghost text-[#64748B]'}`}><FaChartPie />Stats</Link>
                 </div>
             </div>
         </div>
