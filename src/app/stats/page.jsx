@@ -9,7 +9,7 @@ const StatsPage = () => {
         <div className="space-y-6">
             <h3 className='text-5xl font-bold text-[#1F2937]'>Friendship Analytics</h3>
 
-            <div className="p-10 bg-base-100">
+            <div className="p-10 bg-base-100 rounded-xl">
                 <h1 className="text-xl font-medium text-[#244D3F]">By Interaction Type</h1>
                 <div className="py-4 flex items-center justify-center">
                     <PieChart />
@@ -25,7 +25,7 @@ const StatsPage = () => {
                     </div>
                     <div className="flex gap-2 items-center">
                         <div className="p-2 bg-[#37A163] rounded-full"></div>
-                        <p>Video Call</p>
+                        <p>Video</p>
                     </div>
                 </div>
             </div>

@@ -22,9 +22,9 @@ export default function PieChart({ isAnimationActive = true }) {
         { name: 'Video Calls', value: videoCallCount, fill: '#37A163' },
     ];
 
-    // #endregion
+    // #endregion { width: '100%', maxWidth: '400px', height: '450px' }
     return (
-        <div style={{ width: '100%', maxWidth: '400px', height: '450px' }}>
+        <div className='w-full max-w-100 md:h-112 h-50'>
             <ResponsiveContainer width="100%" height="100%" aspect={1}>
                 <RechartsPieChart>
                     <Pie
