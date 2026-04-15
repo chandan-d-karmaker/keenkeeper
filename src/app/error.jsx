@@ -11,7 +11,7 @@ const ErrorElement = ({ error, reset }) => {
             <div className="text-center">
                 
                 <p className="text-6xl font-black text-red-600 animate-bounce">
-                    !
+                    404
                 </p>
 
                 <h1 className="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
@@ -23,7 +23,7 @@ const ErrorElement = ({ error, reset }) => {
                 </p>
 
                 {/* Technical Detail */}
-                <p className="mt-2 text-xs font-mono text-gray-400">
+                <p className="mt-2 text-sm font-mono text-gray-400">
                     Error Message: {error.message || "Internal Server Error"}
                 </p>
 
@@ -36,14 +36,14 @@ const ErrorElement = ({ error, reset }) => {
                     </button>
 
                     <button
-                        onClick={() => reset()} // Next.js specific: tries to re-render the segment
+                        onClick={() => reset()}
                         className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 transition-all"
                     >
                         Try Again
                     </button>
 
                     <Link
-                        href="/" // Changed 'to' to 'href'
+                        href="/"
                         className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 transition-all"
                     >
                         Go Home

@@ -4,7 +4,7 @@ import React from 'react';
 
 const TimelineCard = ({ item }) => {
     return (
-        <div className='p-6 bg-base-100 rounded-2xl border border-white shadow-md'>
+            <div className='p-4 bg-base-100 rounded-lg border border-[#E9E9E9]'>
             <div className='flex items-center gap-4'>
                 <div>
                     {item.type === 'Call' && <Image src="/imgs/call.png" alt="call" width={40} height={40} />}

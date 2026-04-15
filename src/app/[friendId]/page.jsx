@@ -80,7 +80,7 @@ const FriendDetails = ({ params }) => {
                         <h1 className='text-xl font-normal text-[#244D3F] '>Relationship Goal</h1>
                         <button className='btn'>Edit</button>
                     </div>
-                    <p className='text-[#64748B] text-[18px] '>Connect every <span className='text-[#1F2937] font-bold text-[18px]'>30 days</span></p>
+                    <p className='text-[#64748B] text-[18px] '>Connect every <span className='text-[#1F2937] font-bold text-[18px]'>{efriend.goal} days</span></p>
                 </div>
 
                 <div className='p-6 space-y-4 bg-base-100 rounded-2xl border-white shadow-md'>
