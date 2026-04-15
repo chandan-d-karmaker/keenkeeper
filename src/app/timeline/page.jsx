@@ -1,14 +1,26 @@
 'use client';
 
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { friendContext } from '../contextAPI/friendContext';
 import TimelineCard from '@/components/TimelineCard';
 
 const TimelinePage = () => {
     const { timeline } = useContext(friendContext);
     
+    const [sortType, setSortType] = useState('');
 
     const [filteredTimeline, setFilteredTimeline] = useState(timeline);
+
+    useEffect(() => {
+        if (sortType) {
+            const sorted = [...timeline].filter(item => item.type === sortType);
+            // eslint-disable-next-line react-hooks/set-state-in-effect
+            setFilteredTimeline(sorted);
+        } else {
+            setFilteredTimeline(timeline);
+        }
+    }, [sortType, timeline]);
+
 
     return (
         <div className='space-y-6'>
@@ -18,15 +30,17 @@ const TimelinePage = () => {
                 </div>
                 <select defaultValue="Filter timeline" className='select max-w-xs'>
                     <option>Filter timeline</option>
-                    <option>Call</option>
-                    <option>SMS</option>
-                    <option>Video Call</option>
+                    <option onClick={()=> setSortType('Call')}>Call</option>
+                    <option onClick={()=> setSortType('SMS')}>SMS</option>
+                    <option onClick={()=> setSortType('Video Call')}>Video Call</option>
                 </select>
             </div>
 
+    
+
             <div className='space-y-4'>
-                {timeline.length > 0 ? (
-                    timeline.map((item, index) => (
+                {filteredTimeline.length > 0 ? (
+                    filteredTimeline.map((item, index) => (
                         <TimelineCard key={index} item={item} />
                     ))
                 ) : (
