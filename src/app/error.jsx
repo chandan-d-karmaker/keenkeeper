@@ -7,10 +7,10 @@ const ErrorElement = ({ error, reset }) => {
 
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-slate-50 px-6 py-24 sm:py-32 lg:px-8">
+        <div className=" flex items-center justify-center bg-base-100 px-6 py-10 sm:py-12 lg:px-8 border-2 border-dashed rounded-3xl shadow-2xl shadow-red-400">
             <div className="text-center">
-                {/* Decorative Element */}
-                <p className="text-6xl font-black text-indigo-600 animate-bounce">
+                
+                <p className="text-6xl font-black text-red-600 animate-bounce">
                     !
                 </p>
 
@@ -19,7 +19,7 @@ const ErrorElement = ({ error, reset }) => {
                 </h1>
 
                 <p className="mt-6 text-base leading-7 text-gray-600 max-w-md mx-auto">
-                    An unexpected error occurred. Our team has been notified and we&aposre working on it.
+                    An unexpected error occurred. Our team has been notified and we&apos;re working on it.
                 </p>
 
                 {/* Technical Detail */}
@@ -29,7 +29,7 @@ const ErrorElement = ({ error, reset }) => {
 
                 <div className="mt-10 flex items-center justify-center gap-x-6">
                     <button
-                        onClick={() => router.back()} // Next.js equivalent to navigate(-1)
+                        onClick={() => router.back()}
                         className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 transition-all"
                     >
                         Go Back
@@ -46,7 +46,7 @@ const ErrorElement = ({ error, reset }) => {
                         href="/" // Changed 'to' to 'href'
                         className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 transition-all"
                     >
-                        Take me Home
+                        Go Home
                     </Link>
                 </div>
             </div>
