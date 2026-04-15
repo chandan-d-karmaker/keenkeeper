@@ -4,7 +4,7 @@ import React, { use, useContext } from 'react';
 
 const Banner = () => {
 
-    const { friends } = useContext(friendContext);
+    const { friends, interaction } = useContext(friendContext);
     // console.log(friends);
 
     return (
@@ -36,7 +36,7 @@ const Banner = () => {
                     <h2 className='text-[#64748B] text-[18px]'>Need Attention</h2>
                 </div>
                 <div className='p-8 rounded-xl bg-base-100 text-center border border-white shadow-md'>
-                    <h1 className='text-3xl text-[#244D3F] font-semibold' >0</h1>
+                    <h1 className='text-3xl text-[#244D3F] font-semibold' >{interaction.length}</h1>
                     <h2 className='text-[#64748B] text-[18px]'>Interactions This Month</h2>
                 </div>
 
