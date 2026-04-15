@@ -19,7 +19,7 @@ const ErrorElement = ({ error, reset }) => {
                 </h1>
 
                 <p className="mt-6 text-base leading-7 text-gray-600 max-w-md mx-auto">
-                    An unexpected error occurred. Our team has been notified and we're working on it.
+                    An unexpected error occurred. Our team has been notified and we&aposre working on it.
                 </p>
 
                 {/* Technical Detail */}
