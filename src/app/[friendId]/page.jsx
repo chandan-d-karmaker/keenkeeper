@@ -11,7 +11,6 @@ import { FaArchive } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import InteractionCard from '@/components/InteractionCard';
 
-export const runtime = 'edge';
 
 const FriendDetails = ({ params }) => {
     const { friendId } = use(params);
