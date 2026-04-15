@@ -1,17 +1,7 @@
-'use client'
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import './globals.css'
 
-export const metadata = {
-    title: '404 - Page Not Found',
-    description: 'The page you are looking for does not exist.',
-}
-
 const GlobalNotFound = () => {
-
-    const router = useRouter();
-
 
     return (
         <html lang="en" data-theme='light' className="h-full md:w-4/5 md:mx-auto mx-4 bg-base-300">
@@ -33,26 +23,20 @@ const GlobalNotFound = () => {
 
 
                         <div className="mt-10 flex items-center justify-center gap-x-6">
-                            <button
-                                onClick={() => router.back()}
+                            {/* <Link href='./'
+                                
                                 className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 transition-all"
                             >
                                 Go Back
-                            </button>
+                            </Link> */}
 
-                            <button
-                                onClick={() => reset()}
-                                className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 transition-all"
-                            >
-                                Try Again
-                            </button>
 
-                            <Link
+                            {/* <Link
                                 href="/"
                                 className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 transition-all"
                             >
                                 Go Home
-                            </Link>
+                            </Link> */}
                         </div>
                     </div>
                 </div>

@@ -4,6 +4,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { friendContext } from '../contextAPI/friendContext';
 import TimelineCard from '@/components/TimelineCard';
 
+
 const TimelinePage = () => {
     const { timeline } = useContext(friendContext);
     

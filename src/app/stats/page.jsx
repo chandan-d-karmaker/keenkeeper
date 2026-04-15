@@ -4,6 +4,8 @@ import PieChart from "@/components/PieChart";
 import { useContext } from "react";
 import { friendContext } from "../contextAPI/friendContext";
 
+
+
 const StatsPage = () => {
 
     const { interaction } = useContext(friendContext);

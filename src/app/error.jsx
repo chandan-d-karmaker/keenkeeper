@@ -5,12 +5,11 @@ import { useRouter } from "next/navigation";
 const ErrorElement = ({ error, reset }) => {
     const router = useRouter();
 
-
     return (
         <div className=" flex items-center justify-center bg-base-100 px-6 py-10 sm:py-12 lg:px-8 border-2 border-dashed rounded-3xl ">
             <div className="text-center">
                 
-                <p className="text-6xl font-black text-slate-600 animate-bounce">
+                <p className="text-6xl font-black text-blue-500 animate-bounce">
                     !
                 </p>
 
