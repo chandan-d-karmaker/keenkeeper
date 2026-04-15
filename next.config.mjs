@@ -2,7 +2,10 @@
 const nextConfig = {
   /* config options here */
   reactCompiler: true,
-  devIndicators: false
+  devIndicators: false,
+  experimental: {
+    globalNotFound: true,
+  },
 };
 
 export default nextConfig;

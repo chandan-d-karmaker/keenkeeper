@@ -7,11 +7,11 @@ const ErrorElement = ({ error, reset }) => {
 
 
     return (
-        <div className=" flex items-center justify-center bg-base-100 px-6 py-10 sm:py-12 lg:px-8 border-2 border-dashed rounded-3xl shadow-2xl shadow-red-400">
+        <div className=" flex items-center justify-center bg-base-100 px-6 py-10 sm:py-12 lg:px-8 border-2 border-dashed rounded-3xl ">
             <div className="text-center">
                 
-                <p className="text-6xl font-black text-red-600 animate-bounce">
-                    404
+                <p className="text-6xl font-black text-slate-600 animate-bounce">
+                    !
                 </p>
 
                 <h1 className="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
