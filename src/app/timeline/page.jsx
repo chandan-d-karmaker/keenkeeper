@@ -7,20 +7,30 @@ import TimelineCard from '@/components/TimelineCard';
 
 const TimelinePage = () => {
     const { timeline } = useContext(friendContext);
-    
+
     const [sortType, setSortType] = useState('');
+    const [searchFriend, setSearchFriend] = useState('');
 
     const [filteredTimeline, setFilteredTimeline] = useState(timeline);
 
     useEffect(() => {
+        let filteredTimeline = [...timeline];
+
         if (sortType) {
-            const sorted = [...timeline].filter(item => item.type === sortType);
-            // eslint-disable-next-line react-hooks/set-state-in-effect
-            setFilteredTimeline(sorted);
-        } else {
-            setFilteredTimeline(timeline);
+            filteredTimeline = filteredTimeline.filter(item => item.type === sortType);
         }
-    }, [sortType, timeline]);
+
+        if (searchFriend.trim()) {
+            filteredTimeline = filteredTimeline.filter(item => 
+                item.friend.name.toLowerCase().includes(searchFriend.toLowerCase())
+            );
+        }
+
+        // eslint-disable-next-line react-hooks/set-state-in-effect
+        setFilteredTimeline(filteredTimeline);
+    }, [sortType, searchFriend, timeline]);
+
+
 
 
     return (
@@ -31,13 +41,26 @@ const TimelinePage = () => {
                 </div>
                 <select defaultValue="Filter timeline" className='select max-w-xs'>
                     <option disabled={true}>Filter timeline</option>
-                    <option onClick={()=> setSortType('Call')}>Call</option>
-                    <option onClick={()=> setSortType('SMS')}>SMS</option>
-                    <option onClick={()=> setSortType('Video Call')}>Video Call</option>
+                    <option onClick={() => setSortType('Call')}>Call</option>
+                    <option onClick={() => setSortType('SMS')}>SMS</option>
+                    <option onClick={() => setSortType('Video Call')}>Video Call</option>
                 </select>
             </div>
 
-    
+            
+                <div>
+                    <label className="input">
+                        <input 
+                            type="text" 
+                            placeholder="Enter your friend's name" 
+                            value={searchFriend}
+                            onChange={(e) => setSearchFriend(e.target.value)}
+                            required 
+                        />
+                    </label>
+                </div>
+            
+
 
             <div className='space-y-4'>
                 {filteredTimeline.length > 0 ? (
