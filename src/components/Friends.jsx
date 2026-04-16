@@ -1,14 +1,34 @@
 'use client'
 
-import React, { use, useContext } from 'react';
+import React, { use, useContext, useEffect, useState } from 'react';
 import FriendCard from './FriendCard';
 import { friendContext } from '@/app/contextAPI/friendContext';
+import FriendLoader from './FriendLoader';
 
 
 const Friends = () => {
 
     const {friends} = useContext(friendContext);
+    const [loading, setLoading] = useState(true);
 
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setLoading(false);
+
+        }, 2000);
+
+        return () => clearTimeout(timer);
+    }, []);
+
+    if (loading) {
+        return (
+            <>
+                <div>
+                    <FriendLoader/>
+                </div>
+            </>
+        );
+    }
 
     return (
         <>
