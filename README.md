@@ -160,12 +160,12 @@ http://localhost:5173
 
 <div>
 
-<img scr="/preview/banner.png">
-<img scr="/preview/friends.png">
-<img scr="/preview/friends-details.png">
-<img scr="/preview/timeline.png">
-<img scr="/preview/stats-hl.png">
-    
+<img scr=".src/app/data/preview/banner.png">
+<img scr=".src/app/data/preview/friends.png">
+<img scr=".src/app/data/preview/friends-details.png">
+<img scr=".src/app/data/preview/timeline.png">
+<img scr=".src/app/data/preview/stats-hl.png"> 
+
 </div>
 
 ---
