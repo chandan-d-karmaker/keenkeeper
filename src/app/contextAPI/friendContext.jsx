@@ -4,7 +4,8 @@ import { toast } from 'react-toastify';
 import friendsData from '@/app/data/friends.json';
 
 export const friendContext = createContext();
-// const friendPromise = fetch('/friends.json').then(res => res.json());
+
+// const friendPromise = fetch('https://kinkeeper-ck.vercel.app/friends.json').then(res => res.json());
 
 
 

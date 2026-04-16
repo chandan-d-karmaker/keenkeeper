@@ -1,3 +1,4 @@
+'use client';
 import Link from "next/link";
 import './globals.css'
 
@@ -23,20 +24,20 @@ const GlobalNotFound = () => {
 
 
                         <div className="mt-10 flex items-center justify-center gap-x-6">
-                            {/* <Link href='./'
+                                <div onClick={() => window.history.back(-1)}
+                                    
+                                    className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm ring-gray-300 hover:bg-gray-50 transition-all cursor-pointer"
+                                >
+                                    Go Back
+                                </div>
+
+
+                            <div onClick={() => window.location.replace('/')}
                                 
-                                className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 transition-all"
-                            >
-                                Go Back
-                            </Link> */}
-
-
-                            {/* <Link
-                                href="/"
-                                className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 transition-all"
+                                className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 transition-all cursor-pointer"
                             >
                                 Go Home
-                            </Link> */}
+                            </div>
                         </div>
                     </div>
                 </div>
