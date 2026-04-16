@@ -1,36 +1,211 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🫂KinKeeper - Keep Your Relationships Alive
 
-## Getting Started
+**KinKeeper** is a modern, responsive web application designed to help users **track, manage, and nurture personal relationships**. It provides smart reminders, interaction tracking, and insightful analytics to ensure no meaningful connection fades away.
 
-First, run the development server:
+🔗 **[Live Demo](https://kinkeeper-ck.vercel.app/)** 
+📂 **[GitHub Repo](https://github.com/chandan-d-karmaker/kinkeeper )**  
 
+
+## 🚀 Features
+
+### 🧑‍🤝‍🧑 Friend Management
+- A comprehensive overview of your social circle with summary cards tracking your overall contact status.
+
+- **Smart Status Tracking:** Dynamic friend cards that change color based on urgency instantly see who is "On-track," "Almost Due," or "Overdue" for a chat.
+
+- **Visual status indicators:**
+  - 🔴 Overdue
+  - 🟡 Almost Due
+  - 🟢 On Track
+
+---
+
+### 📊 Smart Relationship Tracking
+- Track **days since last contact**
+- Set a **relationship goal** (e.g., contact every 14 days)
+- Automatically calculates:
+  - **Contact status**
+  - **Next due date**
+- Helps maintain consistent communication habits
+
+---
+
+### ⚡ Quick Check-In System
+- Instantly **log interactions** with one click:
+
+  - 📞 Call
+  - 💬 Text
+  - 🎥 Video
+- Automatically:
+  - Adds **timeline entries**
+  - Records date & interaction type
+- Real-time **toast notifications** for feedback
+
+---
+
+### 📜 Timeline History
+- View complete history of **all interactions**
+- Each entry shows:
+  - 📅 Date
+  - 📌 Interaction type (Call/Text/Video)
+  - 📝 Description (e.g., "Call with John")
+- **Filter** interactions by type:
+  - Call / Text / Video
+
+---
+
+### 📈 Friendship Analytics
+- Interactive **Pie Chart (Recharts)** visualization
+- Displays distribution of:
+
+  - Calls
+  - Texts
+  - Video calls
+- Provides insight into communication patterns
+
+---
+
+### 🎯 Friend Details Dashboard
+- Dedicated page for each friend
+
+- Includes:
+  - Profile overview
+  - Contact stats
+  - Relationship goal tracking
+  - Quick action buttons
+- Clean two-column layout for better usability
+
+---
+
+### 🎨 Modern UI/UX
+- Built with a clean and intuitive interface
+- Smooth navigation using React Router
+- Icon-based navigation for better experience
+- Fully **responsive**:
+
+  - 📱 Mobile
+  - 📲 Tablet
+  - 💻 Desktop
+
+---
+
+### ⚙️ Additional Functionalities
+- 🔄 Loading animation while fetching data
+- 🚫 Custom 404 Page for invalid routes
+- 🔔 Toast notifications for user actions
+- 🔁 Page reload support without breaking routes
+- 📌 Active route highlighting in Navbar
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React.js + Next.js 
+- **Routing:** App Router 
+- **Styling:** Tailwind CSS + Component Library ( DaisyUI ) 
+- **Charts:** Recharts  
+- **Notification:** React Toastify  
+- **Icons:** React Icons  
+- **State Management:** React Hooks  
+- **Deployment:** Vercel  
+
+---
+
+## 📦 Installation & Setup
+
+Run this project locally by following these steps:
+
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/chandan-d-karmaker/kinkeeper.git
+```
+### 2️⃣ Navigate to the project folder
+```bash
+cd kinkeeper
+```
+### 3️⃣ Install dependencies
+```bash
+npm install
+```
+### 4️⃣ Start development server
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+### 5️⃣ Open in browser
+```bash
+http://localhost:5173
+```
+### 📂 Project Structure
+```
+.
+├── src/
+│   ├── app/                    # Main application routes (Next.js App Router)
+│   │   ├── [friendId]/         # Dynamic route for a friend's details page
+│   │   ├── contextAPI/         # Global state management using React Context
+│   │   ├── data/               # Folder containing data files like friends.json
+│   │   ├── stats/              # Route for the Friendship Analytics page
+│   │   ├── timeline/           # Route for the Interaction Timeline page
+│   │   ├── error.jsx           # Global error handling component
+│   │   ├── favicon.ico         # App favicon
+│   │   ├── global-not-found.jsx # 404 page for invalid routes
+│   │   ├── globals.css         # Global CSS styles
+│   │   ├── layout.js           # Root layout component
+│   │   ├── loading.jsx         # Global loading component
+│   │   └── page.js             # Root page component (Home page)
+│   └── components/             # Reusable UI components (Navbar, Footer, etc.)
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 🎦 Preview
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+<div>
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+<img scr="./public/preview/banner.png">
+<img scr="./public/preview/friends.png">
+<img scr="./public/preview/friends-details.png">
+<img scr="./public/preview/timeline.png">
+<img scr="./public/preview/stats-hl.png">
+    
+</div>
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+### 🤝 Contributing
+### Contributions are welcome!
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Fork the repository
+2. Create a new branch
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+  ```
+    git checkout -b feature/AmazingFeature
+  ```
+3. Commit your changes
 
-## Deploy on Vercel
+```
+git commit -m "Add Amazing Feature"
+```
+4. Push to GitHub
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+git push origin feature/AmazingFeature
+```
+5. Open a Pull Request
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+
+### 📄 License
+
+### This project is licensed under the **MIT License**.
+
+---
+<div align='center'>
+
+### 👨‍💻 Developed by Chandan Karmaker
+
+### [Github](https://github.com/chandan-d-karmaker)
+### [LinkedIn](https://www.linkedin.com/in/chandankarmaker/)
+
+</div>
+
+---
