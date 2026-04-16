@@ -30,7 +30,7 @@ const TimelinePage = () => {
                     <h3 className='text-5xl font-bold text-[#1F2937]'>Timeline</h3>
                 </div>
                 <select defaultValue="Filter timeline" className='select max-w-xs'>
-                    <option>Filter timeline</option>
+                    <option disabled={true}>Filter timeline</option>
                     <option onClick={()=> setSortType('Call')}>Call</option>
                     <option onClick={()=> setSortType('SMS')}>SMS</option>
                     <option onClick={()=> setSortType('Video Call')}>Video Call</option>
