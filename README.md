@@ -1,6 +1,6 @@
-# 🫂KinKeeper - Keep Your Relationships Alive
+# 🫂KeenKeeper - Keep Your Relationships Alive
 
-**KinKeeper** is a modern, responsive web application designed to help users **track, manage, and nurture personal relationships**. It provides smart reminders, interaction tracking, and insightful analytics to ensure no meaningful connection fades away.
+**KeenKeeper** is a modern, responsive web application designed to help users **track, manage, and nurture personal relationships**. It provides smart reminders, interaction tracking, and insightful analytics to ensure no meaningful connection fades away.
 
 🔗 **[Live Demo](https://kinkeeper-ck.vercel.app/)** 
 📂 **[GitHub Repo](https://github.com/chandan-d-karmaker/kinkeeper )**  
