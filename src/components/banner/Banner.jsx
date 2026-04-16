@@ -1,6 +1,7 @@
 'use client'
 import FriendContextProvider, { friendContext } from '@/app/contextAPI/friendContext';
 import React, { use, useContext } from 'react';
+import { LuUserPlus } from "react-icons/lu";
 
 const Banner = () => {
 
@@ -17,7 +18,7 @@ const Banner = () => {
                         relationships that matter most.</p>
                 </div>
                 <div className='flex justify-center items-center'>
-                    <button className='btn bg-[#244D3F] text-white font-semibold'>+ Add a friend</button>
+                    <button className='btn bg-[#244D3F] text-white font-semibold'><LuUserPlus /> Add a friend</button>
                 </div>
             </div>
 

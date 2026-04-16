@@ -28,9 +28,9 @@ const Navbar = () => {
 
                         </ul>
                     </div>
-                    <a className="btn btn-ghost">
+                    <Link href='/' className="btn btn-ghost">
                         <Image src='/imgs/logo.png' loading='eager' alt='logo' width={131} height={31} className='w-full h-full' />
-                    </a>
+                    </Link>
                 </div>
 
                 <div className="navbar-end space-x-2 hidden md:flex">
