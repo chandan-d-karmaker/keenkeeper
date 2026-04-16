@@ -160,11 +160,11 @@ http://localhost:5173
 
 <div>
 
-<img scr="./public/preview/banner.png">
-<img scr="./public/preview/friends.png">
-<img scr="./public/preview/friends-details.png">
-<img scr="./public/preview/timeline.png">
-<img scr="./public/preview/stats-hl.png">
+<img scr="/preview/banner.png">
+<img scr="/preview/friends.png">
+<img scr="/preview/friends-details.png">
+<img scr="/preview/timeline.png">
+<img scr="/preview/stats-hl.png">
     
 </div>
 
